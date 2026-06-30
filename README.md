@@ -5,6 +5,7 @@ A full-stack MERN-based Placement Portal developed to streamline the campus recr
 ## Features
 
 ### TPO Portal
+<img width="1557" height="645" alt="image" src="https://github.com/user-attachments/assets/0ced8517-6af4-44d1-8924-330d9ccef1dc" />
 
 - Dashboard with placement statistics
 - Student management
@@ -18,6 +19,7 @@ A full-stack MERN-based Placement Portal developed to streamline the campus recr
 
 ### Student Portal
 
+
 - Secure registration and login
 - Profile management
 - Resume upload
@@ -27,6 +29,8 @@ A full-stack MERN-based Placement Portal developed to streamline the campus recr
 - View published results
 
 ### Recruiter Portal
+<img width="1561" height="642" alt="image" src="https://github.com/user-attachments/assets/4d7f47f9-c2ad-4bef-b615-8a78a506501a" />
+
 
 - Company dashboard
 - Company profile management
