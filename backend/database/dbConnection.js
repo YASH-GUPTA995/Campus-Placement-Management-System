@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 
 export const dbConnection = () => {
-  console.log("MONGO_URI:", MONGO_URI);
+  console.log("MONGO_URL:", process.env.MONGO_URL);
+
   mongoose
-    .connect(MONGO_URI, {
+    .connect(process.env.MONGO_URL, {
       dbName: "NIT_DELHI_PLACEMENT_PORTAL",
     })
     .then(() => {
