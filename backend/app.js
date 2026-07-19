@@ -15,17 +15,28 @@ dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL_STUDENT,
+  process.env.FRONTEND_URL_TPO,
+  process.env.FRONTEND_URL_COMPANY,
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:5175",
+  "https://localhost:5173",
+  "https://localhost:5174",
+  "https://localhost:5175",
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: [
-      process.env.FRONTEND_URL_STUDENT,
-      process.env.FRONTEND_URL_TPO,
-      process.env.FRONTEND_URL_COMPANY,
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.options("*", cors());
 
 app.use(cookieParser());
 app.use(express.json());
